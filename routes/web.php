@@ -72,6 +72,7 @@ Route::get('/delete/{id}/{role_id}', function($id, $role_id){
 
 });
 
+//This will attach a role to the user
 Route::get('/attach/{id}/{user_role}', function($id, $user_role) {
     $user = User::findOrFail($id);
 
@@ -82,6 +83,7 @@ Route::get('/attach/{id}/{user_role}', function($id, $user_role) {
     }
 });
 
+//This will detach a role from a user
 Route::get('/detach/{id}/{user_role}', function($id, $user_role){
    $user = User::findOrFail($id);
 
